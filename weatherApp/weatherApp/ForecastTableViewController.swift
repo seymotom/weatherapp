@@ -30,7 +30,6 @@ class ForecastTableViewController: UITableViewController {
         ForecastManager.shared.getWeather { (forecasts) in
             if let forecasts = forecasts {
                 self.forecasts = forecasts
-                dump(self.forecasts)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
